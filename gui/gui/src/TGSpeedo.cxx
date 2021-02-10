@@ -420,7 +420,7 @@ void TGSpeedo::SetScaleValue(Float_t val)
       fPeakVal = fValue;
 
    if (fBufferSize > 0) {
-      if (fBuffer.size() < fBufferCount + 1)
+      if ((Int_t)fBuffer.size() < fBufferCount + 1)
          fBuffer.push_back(fValue);
       else
          fBuffer[fBufferCount % fBufferSize] = fValue;
